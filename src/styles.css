@@ -1,0 +1,47 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#expense-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#expense-form input, #expense-form select {
+    margin: 5px;
+    padding: 5px;
+}
+
+#add-expense {
+    padding: 5px 10px;
+}
+
+#expense-list {
+    margin-bottom: 20px;
+}
+
+#expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#expenses-table th, #expenses-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#expenses-table th {
+    background-color: #f2f2f2;
+}
+
+#reports {
+    width: 400px;
+    margin: 0 auto;
+}

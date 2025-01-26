@@ -1,0 +1,36 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "serve": "serve dist",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "globals": "^14.0.0",
+    "jsdom": "^25.0.1",
+    "rollup": "^4.24.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "serve": "^14.2.3",
+    "vitest": "^2.1.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "jquery": "^3.7.1"
+  }
+}
