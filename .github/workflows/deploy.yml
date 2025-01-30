@@ -13,20 +13,21 @@ permissions:
 jobs:
   # Build job
   build:
-    # Specify runner +  build & upload the static files as an artifact
-    runs-on: ubuntu-latest
-    steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+  # Specify runner + build & upload the static files as an artifact
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4  # Correct indentation
 
-  - name: Install dependencies
-    run: npm install  # Ensure all dependencies are installed
+    - name: Install dependencies
+      run: npm install  # Correct indentation
 
-  - name: Build static files
-    id: build
-    run: |
-      npm run build  # Generate static files
-      mv dist build_outputs_folder  # Rename 'dist/' to match the upload path
+    - name: Build static files
+      id: build
+      run: |
+        npm run build  # Generate static files
+        mv dist build_outputs_folder  # Rename 'dist/' to match the upload path
+
 
   - name: Upload static files as artifact
     id: deployment
