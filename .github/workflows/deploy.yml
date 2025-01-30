@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your main branch has a different name
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Build job
+  build:
+    # Specify runner +  build & upload the static files as an artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+    uses: actions/checkout@v4
+
+      - name: Install dependencies
+    run: npm install  # Ensure all dependencies are installed
+
+      - name: Build static files
+    id: build
+    run: |
+      npm run build  # Generate static files
+      mv dist build_outputs_folder  # Rename 'dist/' to match the upload path
+
+  - name: Upload static files as artifact
+    id: deployment
+    uses: actions/upload-pages-artifact@v3
+    with:
+      path: build_outputs_folder/  # Upload the built files for deployment
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
+
+  "scripts": {
+  "build": "your-build-command-here"
+}
