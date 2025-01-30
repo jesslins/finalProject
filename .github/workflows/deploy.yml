@@ -16,13 +16,13 @@ jobs:
     # Specify runner +  build & upload the static files as an artifact
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+  - name: Checkout repository
     uses: actions/checkout@v4
 
-      - name: Install dependencies
+  - name: Install dependencies
     run: npm install  # Ensure all dependencies are installed
 
-      - name: Build static files
+  - name: Build static files
     id: build
     run: |
       npm run build  # Generate static files
