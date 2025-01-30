@@ -46,6 +46,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  "scripts": {
-  "build": "your-build-command-here"
-}
