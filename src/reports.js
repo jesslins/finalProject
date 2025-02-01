@@ -40,7 +40,7 @@ export class Reports {
       options: {}
     });
 
-    this.updateChart()
+    this.updateChart();
   }
 
   /**
